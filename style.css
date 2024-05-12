@@ -1,18 +1,20 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box; /*Corregir bordes*/
 }
 
 body{
     font-family: "Montserrat", sans-serif;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 .personaje{
-    display: wrap;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -25,7 +27,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    box-shadow:  0px 0px 10px 1px rgba(0, 0, 0, 0.479);
+    box-shadow:  0px 0px 10px 1px rgba(94, 10, 10, 0.479);
     border-radius: 1rem;
     transition: all 800ms ease;
 }
@@ -48,13 +50,19 @@ body{
 .texto{
     width: 250px; 
     margin-left: 2rem;
-    color: rgb(0, 0, 0);
+    color: rgb(135, 6, 6);
 }
 
 .p{
     font-size: 15px;
     margin-top: 1rem;
-    color: rgb(0, 0, 0);
+    color: rgb(135, 6, 6);
+}
+
+.p2{
+    font-size: 15px;
+    margin-top: 1rem;
+    color: rgb(135, 6, 6);
 }
 
 .contenedorbtn{
@@ -69,7 +77,7 @@ body{
     font-weight: bolder;
     color: aliceblue;
     background-color: rgb(135, 6, 6);
-    border-radius: 0.3rem;
+    border-radius: 2rem;
     height: 40px;
     width: 150px;
     margin-right: 1.5rem;
@@ -84,12 +92,33 @@ body{
     
 }
 
-.basura{
-    color: rgb(0, 0, 0);
+.basurita{
+    color: rgb(135, 6, 6);
     transform: scale(1.5);   
     transition: all 800ms ease;
 }
 
-.basura.basura:hover{
+.basurita:hover{
     transform: scale(2);   
+}
+
+.barraBusqueda {
+    margin-top: 1rem;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    box-shadow:  0px 0px 10px 1px rgba(94, 10, 10, 0.479);
+    border: none;
+
+}
+
+.H1{
+    margin-top: 1rem;
+    color: rgb(135, 6, 6);
+}
+
+.ima{
+    margin-top: 2rem;
+    width: 100px;
+    height: 100px;
 }

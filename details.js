@@ -2,17 +2,20 @@ import {personajePorId} from "./utils.js"
 
 const render =async () => {
 
-    
+    //Sincronizar el id
     const params = new URLSearchParams(window.location.search);
     const id =params.get("id");
     const personaje = await personajePorId(id);
 
+    //Para que en el header se ajuste con el personaje tocado
     const headTitle= document.querySelector("#headTitle");
     headTitle.textContent=`${personaje.displayName} Character`;
 
+    //Traigo el section del index
     const secPersonaje = document.querySelector(".Personaje");
     secPersonaje.classList.add("personaje");
 
+    //Btn de regresar a las cards
     const btn = document.createElement("button");
     btn.src="#";
     btn.textContent="Back to the Cards";
@@ -20,12 +23,14 @@ const render =async () => {
     secPersonaje.appendChild(btn);
 
     btn.addEventListener("click", () => {
-        window.location.href = `.\index.html`;  
+        window.location.href = `./index.html`;  
       });
 
+//Card es el que contiene la img y los textos
     const card= document.createElement("div");
     card.classList.add("card");
 
+    //Div de la imagen del personaje
     const divPersoIma= document.createElement("div");
 
     const imgPersonaje = document.createElement("div");
@@ -40,6 +45,7 @@ const render =async () => {
     card.appendChild(divPersoIma)
     secPersonaje.appendChild(card);
 
+    //Div para los textos
     const divPersoTxt = document.createElement("div");
     divPersoTxt.classList.add("texto")
 
