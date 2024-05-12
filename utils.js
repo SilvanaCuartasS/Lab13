@@ -1,5 +1,5 @@
 export const cargaPersonajes = async () => {
-  const response = await fetch("https://valorant-api.com/v1/agents"); // el fetch para cargar archivos json o apis
+  const response = await fetch("https://valorant-api.com/v1/agents"); 
   const info = await response.json();
   
   return info.data;

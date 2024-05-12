@@ -62,7 +62,7 @@ const renderizarCards = async (textoBusqueda) =>{
        btn.classList.add("btn");
    
        btn.addEventListener("click", () => {
-         window.location.href = `./detail.html?id=${item.uuid}`;
+         window.location.href = `./details.html?id=${item.uuid}`;
        });
    
        const basurita = document.createElement("img");
